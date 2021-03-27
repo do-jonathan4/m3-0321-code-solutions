@@ -1,5 +1,5 @@
-import React from "react"
-import ReactDOM from "react-dom"
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 const pokedex = [
   { number: '001', name: 'Bulbasaur' },
@@ -10,8 +10,8 @@ const pokedex = [
 ];
 
 const listItems = pokedex.map(x =>
-  <li>{x.name}</li>
-)
+  <li key={x.number}>{x.name}</li>
+);
 
 ReactDOM.render(
   <ul>{listItems}</ul>,
