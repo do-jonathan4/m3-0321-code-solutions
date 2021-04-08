@@ -22,12 +22,11 @@ export default class App extends React.Component {
       .then(res => res.json())
       .then(data => this.setState({
         todos: data
-      }))
+      }));
   }
 
   addTodo(newTodo) {
-    const cloneState = [...this.state.todos]
-    cloneState.push(newTodo)
+    const cloneState = [...this.state.todos];
 
     fetch('/api/todos', {
       method: 'POST',
@@ -35,16 +34,19 @@ export default class App extends React.Component {
       body: JSON.stringify(newTodo)
     })
       .then(res => res.json())
-      .then(data => this.setState({
-        todos: cloneState
-      }))
+      .then(data => {
+        cloneState.push(data);
+        this.setState({
+          todos: cloneState
+        });
+      });
   }
 
   toggleCompleted(todoId) {
-    const cloneState = [...this.state.todos]
-    const todoIndex = cloneState.findIndex(x => x.todoId === todoId)
-    const todo = cloneState[todoIndex]
-    todo.isCompleted = !todo.isCompleted
+    const cloneState = [...this.state.todos];
+    const todoIndex = cloneState.findIndex(x => x.todoId === todoId);
+    const todo = cloneState[todoIndex];
+    todo.isCompleted = !todo.isCompleted;
 
     fetch(`/api/todos/${todoId}`, {
       method: 'PATCH',
@@ -53,11 +55,11 @@ export default class App extends React.Component {
     })
       .then(res => res.json())
       .then(data => {
-        cloneState[todoIndex] = data
+        cloneState[todoIndex] = data;
         this.setState({
           todos: cloneState
-        })
-      })
+        });
+      });
   }
 
   render() {
