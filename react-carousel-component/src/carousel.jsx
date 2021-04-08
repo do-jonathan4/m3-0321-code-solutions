@@ -4,33 +4,25 @@ class Carousel extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      imgIndex: 0,
-      activeInterval: null
+      imgIndex: 0
     }
     this.changeIndex = this.changeIndex.bind(this)
     this.slideShow = this.slideShow.bind(this)
   }
   slideShow() {
-    if (this.state.state.activeInterval) {
-      clearInterval(this.state.activeInterval)
-      this.setState({ activeInterval: null })
-    } else {
-      const newInterval = setInterval(this.changeIndex, 1000)
-      this.setState({ activeInterval: newInterval })
-    }
+    setInterval(() => this.changeIndex(this.state.imgIndex + 1), 3000)
   }
   changeIndex(n) {
-    const slides = document.getElementsByClassName("slide");
-    this.setState({ imgIndex: n })
+    const slides = this.props.items;
 
-    if (n > slides.length - 1) {
+    if (n >= slides.length) {
       n = 0
-      this.setState({ imgIndex: n })
-    }
-    if (n < 0) {
+    } else if (n < 0) {
       n = slides.length - 1
-      this.setState({ imgIndex: n })
+    } else {
+      n
     }
+    this.setState({ imgIndex: n })
   }
   render() {
     const slides = this.props.items.map((x, i) =>
@@ -45,6 +37,7 @@ class Carousel extends React.Component {
         onClick={() => this.changeIndex(i)}
       ></div>
     )
+    window.onload = this.slideShow
 
     return (
       <div>
