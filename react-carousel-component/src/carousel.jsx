@@ -24,6 +24,9 @@ class Carousel extends React.Component {
     }
     this.setState({ imgIndex: n })
   }
+  componentDidMount() {
+    this.slideShow()
+  }
   render() {
     const slides = this.props.items.map((x, i) =>
       <div key={x.id}
@@ -37,7 +40,6 @@ class Carousel extends React.Component {
         onClick={() => this.changeIndex(i)}
       ></div>
     )
-    window.onload = this.slideShow
 
     return (
       <div>
