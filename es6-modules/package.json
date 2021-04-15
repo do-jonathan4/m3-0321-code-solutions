@@ -1,18 +1,16 @@
 {
-  "name": "webpack-intro",
+  "name": "es-modules",
   "version": "1.0.0",
-  "description": "",
+  "description": "Converting CommonJS modules to ES modules with Webpack.",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "watch": "webpack --watch --mode=development --devtool=source-map",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "jquery": "^3.6.0"
-  },
   "devDependencies": {
     "webpack": "^5.24.4",
     "webpack-cli": "^4.5.0"

@@ -1,0 +1,13 @@
+#root {
+  display: flex;
+  justify-content: center;
+}
+i {
+  padding: 5px;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green
+}

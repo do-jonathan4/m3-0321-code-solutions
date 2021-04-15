@@ -1,5 +1,5 @@
 {
-  "name": "react-stopwatch-component",
+  "name": "react-hot-button-component",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,7 +14,7 @@
     "@babel/core": "^7.13.10",
     "@babel/plugin-transform-react-jsx": "^7.12.17",
     "babel-loader": "^8.2.2",
-    "webpack": "^5.27.1",
+    "webpack": "^5.26.3",
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {

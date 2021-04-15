@@ -1,0 +1,19 @@
+.accordion {
+  background-color: gainsboro;
+  cursor: pointer;
+  padding: 20px;
+  width: 50%;
+  font-size: 20px;
+}
+
+.accordion:hover {
+  background-color: gray;
+}
+
+.panel {
+  padding: 15px;
+}
+
+.hidden {
+  display: none;
+}
