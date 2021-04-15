@@ -1,0 +1,17 @@
+div{
+  display: flex;
+  justify-content: center;
+}
+#root>div {
+  flex-wrap: wrap;
+  width: 300px;
+}
+#face {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 2px solid black;
+  align-items:center;
+  font-size: 100px;
+  font-family: 'Orbitron', sans-serif;
+}
