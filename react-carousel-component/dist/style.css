@@ -1,0 +1,41 @@
+#root, .dot-container {
+  display: flex;
+  justify-content: center;
+}
+.slide-container {
+  position: relative
+}
+img {
+  width: 500px;
+  vertical-align: middle;
+}
+.hidden {
+  display: none
+}
+.prev, .next {
+  position: absolute;
+  top: 40%;
+  padding: 15px;
+}
+.prev {
+  left: -10%;
+}
+.next {
+  right: -10%;
+}
+.dot {
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: gainsboro;
+  border-radius: 50%;
+  display: inline-block;
+
+}
+.prev:hover, .next:hover {
+  background-color:gray;
+}
+.active, .dot:hover {
+  background-color: red;
+}
