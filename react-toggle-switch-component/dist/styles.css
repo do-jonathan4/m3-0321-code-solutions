@@ -1,0 +1,33 @@
+#root {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+.container-slider-on, .container-slider, .container-text {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  margin: 50px;
+  background-color: indianred;
+}
+.container-slider-on, .container-slider {
+  border-radius: 34px;
+  border: 2px solid black;
+}
+.container-slider-on {
+  background-color: greenyellow;
+}
+.slider {
+  position: absolute;
+  width: 70%;
+  height: 99%;
+  background-color: darkslategrey;
+  border-radius: 34px;
+}
+.on {
+  right: 0px;
+}
